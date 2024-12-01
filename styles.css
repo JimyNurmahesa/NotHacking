@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'Blood';
+  src: url('f24q3228-histery-histery-regular-400.otf') format('opentype'); /* Menentukan file font yang benar */
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Courier', sans-serif;
+}
+
+h1.neon {
+  font-size: 80px;
+  color: #edf0ed;
+  text-align: center;
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #00ff00, 0 0 50px #00ff00;
+  margin-bottom: -7px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.neon {
+  display: inline-block;
+  animation: blink 3s infinite alternate;
+  color: #39ff14; /* Warna neon hijau */
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #00ff00;
+}
+
+#matrix {
+  font-size: 24px; /* Ukuran teks besar */
+  color: #e2e2e2; /* Warna merah darah */
+  text-align: center;
+  text-shadow: 0 0 5px #b30000, 0 0 10px #ff0000, /* Cahaya lebih terang di sekitar teks */ 0 0 20px #ff0000, 0 0 30px #ff0000; /* Membuat efek darah lebih menonjol */
+  font-family: 'Blood', cursive; /* Gunakan font darah yang telah didefinisikan */
+  position: relative;
+}
+
+#matrix span {
+  margin-left: 12px; /* Memberikan jarak kiri setelah tanda '|' */
+  margin-right: 12px; /* Memberikan jarak kanan sebelum tanda '|' */
+}
+
+#matrix span.pipe {
+  margin: 0 12px; /* Memberikan jarak kiri dan kanan pada tanda '|' */
+}
+
+.Hacked,
+.like {
+  font-size: 50px; /* Ukuran teks besar */
+  color: #00ff00; /* Warna hijau neon */
+  text-align: center;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00; /* Efek cahaya neon hijau */
+  font-family: 'Courier', sans-serif;
+}
+
+.No {
+  font-size: 80px; /* Ukuran teks besar */
+  color: #e2e2e2; /* Warna merah darah */
+  text-align: center;
+  text-shadow: 0 0 5px #b30000, 0 0 10px #ff0000, /* Cahaya lebih terang di sekitar teks */ 0 0 20px #ff0000, 0 0 30px #ff0000; /* Membuat efek darah lebih menonjol */
+  font-family: 'Blood', cursive; /* Gunakan font darah yang telah didefinisikan */
+  position: relative;
+  animation: shake 0.5s ease-in-out infinite; /* Mengaktifkan animasi getar */
+}
+
+/* Kelas untuk teks dengan warna hijau */
+.like {
+  font-size: 50px;
+  color: #00ff00;
+  text-align: center;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00; /* Efek cahaya neon hijau */
+  font-family: 'Courier', sans-serif;
+}
+
+.logo img {
+  display: block;
+  margin: 30px auto;
+  width: 250px;
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+audio {
+  display: none;
+}
+
+.content {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.logo {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeInOut 3s infinite; /* Menambahkan animasi fadeInOut */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Menambahkan media query untuk perangkat kecil dan besar */
+@media (max-width: 768px) {
+  h1.neon {
+    font-size: 50px; /* Menurunkan ukuran font untuk layar lebih kecil */
+  }
+
+  #matrix {
+    font-size: 18px; /* Menurunkan ukuran font untuk teks matrix */
+  }
+
+  .Hacked {
+    font-size: 40px; /* Menurunkan ukuran font untuk tulisan 'Hacked' */
+  }
+
+  .No {
+    font-size: 60px; /* Menurunkan ukuran font untuk tulisan 'No' */
+  }
+
+  .logo img {
+    width: 150px; /* Menurunkan ukuran gambar logo pada perangkat kecil */
+  }
+
+  .like {
+    font-size: 40px; /* Menurunkan ukuran font untuk teks 'like' */
+  }
+}
+
+@media (max-width: 480px) {
+  h1.neon {
+    font-size: 35px; /* Menurunkan lebih lanjut ukuran font untuk layar lebih kecil */
+  }
+
+  #matrix {
+    font-size: 16px; /* Mengatur ukuran font teks matrix di layar sangat kecil */
+  }
+
+  .Hacked {
+    font-size: 30px; /* Menurunkan ukuran font untuk tulisan 'Hacked' */
+  }
+
+  .No {
+    font-size: 50px; /* Menurunkan ukuran font untuk tulisan 'No' */
+  }
+
+  .logo img {
+    width: 120px; /* Menurunkan ukuran gambar logo pada perangkat yang lebih kecil */
+  }
+
+  .like {
+    font-size: 35px; /* Menurunkan ukuran font untuk teks 'like' */
+  }
+
+  /* Memastikan agar konten tidak keluar layar */
+  body {
+    overflow-x: hidden;
+  }
+}
