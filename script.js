@@ -26,7 +26,7 @@ function restoreText() {
 // Menjalankan animasi acak setiap 50ms selama 5 detik
 intervalId = setInterval(randomizeText, 50); // Mengubah teks acak setiap 50ms
 
-setTimeout(restoreText, 8000); // Kembali ke teks asli setelah 5 detik
+setTimeout(restoreText, 16000); // Kembali ke teks asli setelah 5 detik
 
 //
 document.addEventListener('DOMContentLoaded', function () {
@@ -71,5 +71,5 @@ document.addEventListener('DOMContentLoaded', function () {
     for (i = 0; i < split.length; ++i) {
       split[i].className = ''; // Hapus semua kelas 'neon'
     }
-  }, 8000); // Setelah 8 detik, hentikan animasi
+  }, 16000); // Setelah 8 detik, hentikan animasi
 });
